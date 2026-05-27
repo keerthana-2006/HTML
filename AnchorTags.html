@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic 4: Links and Anchor Tags</title>
+</head>
+<body>
+
+    <h1>Topic 4: Links (Anchor Tags)</h1>
+
+    <h2>Basic Hyperlink</h2>
+    <p>The a tag (anchor) creates a hyperlink. The href attribute specifies the destination URL.</p>
+
+    <pre>
+code:
+a href="https://www.example.com" Visit Example.com /a
+    </pre>
+
+    <p><a href="https://www.example.com">Visit Example.com</a></p>
+
+    <h2>Open Link in New Tab</h2>
+    <p>Using target="_blank" opens the link in a new browser tab. rel="noopener noreferrer" improves security.</p>
+
+    <pre>
+code:
+a href="https://www.google.com" target="_blank" rel="noopener noreferrer" Open Google in New Tab /a
+    </pre>
+
+    <p><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Open Google in New Tab</a></p>
+
+    <h2>Relative Links (Internal Pages)</h2>
+    <p>Relative links point to pages within the same website.</p>
+
+    <pre>
+code:
+a href="about.html" About Us /a
+a href="contact.html" Contact /a
+a href="images/photo.jpg" View Photo /a
+    </pre>
+
+    <p><a href="about.html">About Us</a> (example - create about.html to test)</p>
+
+    <h2>Email Link</h2>
+    <p>Use mailto: to create an email link that opens the user's email client.</p>
+
+    <pre>
+code:
+a href="mailto:someone@example.com" Send Email /a
+    </pre>
+
+    <p><a href="mailto:someone@example.com">Send Email</a></p>
+
+    <h2>Phone Link</h2>
+    <p>Use tel: to create a phone link (works on mobile devices).</p>
+
+    <pre>
+code:
+a href="tel:+1234567890" Call Us /a
+    </pre>
+
+    <p><a href="tel:+1234567890">Call Us</a></p>
+
+    <h2>Anchor Links (Jump to Section on Same Page)</h2>
+    <p>Create an anchor using id attribute, then link to it using #id.</p>
+
+    <pre>
+code:
+a href="#section-bottom" Jump to Bottom of Page /a
+
+... (content) ...
+
+h2 id="section-bottom" You have reached the bottom! /h2
+    </pre>
+
+    <p><a href="#section-bottom">Jump to Bottom of Page</a></p>
+
+    <h2>Download Link</h2>
+    <p>The download attribute tells the browser to download the file instead of navigating to it.</p>
+
+    <pre>
+code:
+a href="document.pdf" download Download PDF /a
+    </pre>
+
+    <p><a href="document.pdf" download>Download PDF</a> (example - need actual PDF file)</p>
+
+    <h2 id="section-bottom">You have reached the bottom!</h2>
+
+    <hr>
+    <p><a href="index.html">← Back to Topics Index</a> | Topic 4 Complete ✓</p>
+
+</body>
+</html>
