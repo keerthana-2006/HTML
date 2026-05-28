@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic 5: Images</title>
+</head>
+<body>
+
+    <h1>Topic 5: Images</h1>
+
+    <h2>Basic Image (img tag)</h2>
+    <p>The img tag is used to embed images. src specifies the image path, alt provides alternative text for accessibility.</p>
+
+    <pre>
+code:
+img src="https://picsum.photos/id/1/300/200" alt="Mountain landscape" width="300" height="200"
+    </pre>
+
+    <img src="https://picsum.photos/id/1/300/200" alt="Mountain landscape" width="300" height="200">
+
+    <h2>Image with loading="lazy"</h2>
+    <p>The loading="lazy" attribute delays loading images until they are near the viewport, improving page speed.</p>
+
+    <pre>
+code:
+img src="https://picsum.photos/id/15/300/200" alt="Forest path" width="300" height="200" loading="lazy"
+    </pre>
+
+    <img src="https://picsum.photos/id/15/300/200" alt="Forest path" width="300" height="200" loading="lazy">
+
+    <h2>Figure and Figcaption (Semantic Grouping)</h2>
+    <p>figure groups the image with a caption. figcaption provides a visible caption.</p>
+
+    <pre>
+code:
+figure
+    img src="https://picsum.photos/id/20/300/200" alt="Coffee cup"
+    figcaption A delicious cup of coffee. /figcaption
+/figure
+    </pre>
+
+    <figure>
+        <img src="https://picsum.photos/id/20/300/200" alt="Coffee cup">
+        <figcaption>A delicious cup of coffee.</figcaption>
+    </figure>
+
+    <h2>Responsive Image with srcset</h2>
+    <p>The srcset attribute provides different image versions for different screen sizes.</p>
+
+    <pre>
+code:
+img srcset="small.jpg 480w, large.jpg 1080w" 
+     sizes="(max-width: 600px) 480px, 1080px" 
+     src="fallback.jpg" 
+     alt="Responsive demo"
+    </pre>
+
+    <p><em>Note: srcset requires actual image files to work properly.</em></p>
+
+    <h2>Image as a Link</h2>
+    <p>Wrap an img tag inside an a tag to make the image clickable.</p>
+
+    <pre>
+code:
+a href="https://www.example.com"
+    img src="https://picsum.photos/id/26/200/150" alt="Clickable image"
+/a
+    </pre>
+
+    <a href="https://www.example.com">
+        <img src="https://picsum.photos/id/26/200/150" alt="Clickable image">
+    </a>
+
+    <h2>Image Attributes Summary</h2>
+    <ul>
+        <li><strong>src</strong> - Image URL or path (required)</li>
+        <li><strong>alt</strong> - Alternative text for screen readers (required for accessibility)</li>
+        <li><strong>width</strong> - Image width in pixels</li>
+        <li><strong>height</strong> - Image height in pixels</li>
+        <li><strong>loading="lazy"</strong> - Defer loading off-screen images</li>
+        <li><strong>title</strong> - Tooltip text on hover</li>
+    </ul>
+
+  
+
+</body>
+</html>
