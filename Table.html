@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic 7: Tables</title>
+</head>
+<body>
+
+    <h1>Topic 7: HTML Tables</h1>
+
+    <h2>Basic Table Structure</h2>
+    <p>A table is defined with table, tr (table row), th (table header), and td (table data).</p>
+
+    <pre>
+code:
+table border="1"
+    tr
+        th Name /th
+        th Age /th
+        th City /th
+    /tr
+    tr
+        td John /td
+        td 25 /td
+        td New York /td
+    /tr
+    tr
+        td Sarah /td
+        td 30 /td
+        td London /td
+    /tr
+/table
+    </pre>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>30</td>
+            <td>London</td>
+        </tr>
+    </table>
+
+    <h2>Table with thead, tbody, tfoot</h2>
+    <p>Use thead for header rows, tbody for body content, tfoot for footer rows (semantic structure).</p>
+
+    <pre>
+code:
+table border="1"
+    thead
+        tr
+            th Product /th
+            th Price /th
+        /tr
+    /thead
+    tbody
+        tr
+            td Laptop /td
+            td $999 /td
+        /tr
+        tr
+            td Mouse /td
+            td $25 /td
+        /tr
+    /tbody
+    tfoot
+        tr
+            td Total /td
+            td $1024 /td
+        /tr
+    /tfoot
+/table
+    </pre>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>$999</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>$25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>$1024</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Merging Cells: colspan</h2>
+    <p>colspan makes a cell span across multiple columns.</p>
+
+    <pre>
+code:
+table border="1"
+    tr
+        th Name /th
+        th colspan="2" Contact Info /th
+    /tr
+    tr
+        td John /td
+        td john@email.com /td
+        td 555-1234 /td
+    /tr
+/table
+    </pre>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Contact Info</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>john@email.com</td>
+            <td>555-1234</td>
+        </tr>
+    </table>
+
+    <h2>Merging Cells: rowspan</h2>
+    <p>rowspan makes a cell span across multiple rows.</p>
+
+    <pre>
+code:
+table border="1"
+    tr
+        th Department /th
+        th Employee /th
+    /tr
+    tr
+        td rowspan="2" Engineering /td
+        td Alice /td
+    /tr
+    tr
+        td Bob /td
+    /tr
+/table
+    </pre>
+
+    <table border="1">
+        <tr>
+            <th>Department</th>
+            <th>Employee</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Engineering</td>
+            <td>Alice</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+        </tr>
+    </table>
+
+    <h2>Table Caption</h2>
+    <p>caption adds a title/description to the table.</p>
+
+    <pre>
+code:
+table border="1"
+    caption Monthly Sales Report /caption
+    tr
+        th Month /th
+        th Sales /th
+    /tr
+    tr
+        td January /td
+        td $5000 /td
+    /tr
+/table
+    </pre>
+
+    <table border="1">
+        <caption>Monthly Sales Report</caption>
+        <tr>
+            <th>Month</th>
+            <th>Sales</th>
+        </tr>
+        <tr>
+            <td>January</td>
+            <td>$5000</td>
+        </tr>
+    </table>
+
+    <h2>Complete Table Example</h2>
+    <pre>
+code:
+table border="1"
+    caption Employee Directory
+    thead
+        tr
+            th ID /th
+            th Name /th
+            th Position /th
+            th Salary /th
+        /tr
+    /thead
+    tbody
+        tr
+            td 101 /td
+            td Alice Johnson /td
+            td Developer /td
+            td $75,000 /td
+        /tr
+        tr
+            td 102 /td
+            td Bob Smith /td
+            td Designer /td
+            td $65,000 /td
+        /tr
+    /tbody
+    tfoot
+        tr
+            td colspan="3" Average Salary /td
+            td $70,000 /td
+        /tr
+    /tfoot
+/table
+    </pre>
+
+    <table border="1">
+        <caption>Employee Directory</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>101</td>
+                <td>Alice Johnson</td>
+                <td>Developer</td>
+                <td>$75,000</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Bob Smith</td>
+                <td>Designer</td>
+                <td>$65,000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Average Salary</td>
+                <td>$70,000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
