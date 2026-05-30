@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topic 8: Forms and Input Elements</title>
+</head>
+<body>
+
+    <h1>Topic 8: Forms and Input Elements</h1>
+
+    <h2>Basic Form Structure</h2>
+    <p>The form tag wraps all input elements. action specifies where to send data, method specifies GET or POST.</p>
+
+    <pre>
+code:
+form action="/submit-form" method="POST"
+    ... form elements go here ...
+/form
+    </pre>
+
+    <h2>Text Input</h2>
+    <pre>
+code:
+label for="username" Username: /label
+input type="text" id="username" name="username" placeholder="Enter username"
+    </pre>
+
+    <form action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username">
+    </form>
+
+    <h2>Email and Password Inputs</h2>
+    <pre>
+code:
+label for="email" Email: /label
+input type="email" id="email" name="email" required
+
+label for="password" Password: /label
+input type="password" id="password" name="password" minlength="6"
+    </pre>
+
+    <form action="#" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6">
+    </form>
+
+    <h2>Radio Buttons (Single Select)</h2>
+    <pre>
+code:
+fieldset
+    legend Gender: /legend
+    input type="radio" id="male" name="gender" value="male"
+    label for="male" Male /label
+    input type="radio" id="female" name="gender" value="female"
+    label for="female" Female /label
+/fieldset
+    </pre>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Gender:</legend>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </fieldset>
+    </form>
+
+    <h2>Checkboxes (Multiple Select)</h2>
+    <pre>
+code:
+input type="checkbox" id="newsletter" name="newsletter" checked
+label for="newsletter" Subscribe to newsletter /label
+
+input type="checkbox" id="terms" name="terms" required
+label for="terms" I agree to terms /label
+    </pre>
+
+    <form action="#" method="POST">
+        <input type="checkbox" id="newsletter" name="newsletter" checked>
+        <label for="newsletter">Subscribe to newsletter</label>
+        <br>
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to terms</label>
+    </form>
+
+    <h2>Dropdown Menu (select)</h2>
+    <pre>
+code:
+label for="country" Country: /label
+select id="country" name="country"
+    option value="" disabled selected --Select Country-- /option
+    option value="IN" India /option
+    option value="US" USA /option
+    option value="UK" UK /option
+/select
+    </pre>
+
+    <form action="#" method="POST">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="" disabled selected>--Select Country--</option>
+            <option value="IN">India</option>
+            <option value="US">USA</option>
+            <option value="UK">UK</option>
+        </select>
+    </form>
+
+    <h2>Textarea (Multi-line Text)</h2>
+    <pre>
+code:
+label for="message" Message: /label
+textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..." /textarea
+    </pre>
+
+    <form action="#" method="POST">
+        <label for="message">Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..."></textarea>
+    </form>
+
+    <h2>HTML5 Input Types</h2>
+    <pre>
+code:
+input type="date"
+input type="number" min="1" max="100"
+input type="range" min="0" max="100"
+input type="color"
+input type="file"
+input type="search" placeholder="Search..."
+    </pre>
+
+    <form action="#" method="POST">
+        <label>Date:</label> <input type="date"><br><br>
+        <label>Number (1-100):</label> <input type="number" min="1" max="100"><br><br>
+        <label>Range:</label> <input type="range" min="0" max="100"><br><br>
+        <label>Color:</label> <input type="color"><br><br>
+        <label>File:</label> <input type="file"><br><br>
+        <label>Search:</label> <input type="search" placeholder="Search...">
+    </form>
+
+    <h2>Buttons: Submit, Reset, Button</h2>
+    <pre>
+code:
+button type="submit" Submit Form /button
+button type="reset" Reset Form /button
+button type="button" Click Me (No action) /button
+    </pre>
+
+    <form action="#" method="POST">
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+        <button type="button">Click Me (No action)</button>
+    </form>
+
+    <h2>Complete Form Example</h2>
+    <pre>
+code:
+form action="/register" method="POST"
+    fieldset
+        legend Registration Form /legend
+        
+        label for="fullname" Full Name: /label
+        input type="text" id="fullname" name="fullname" placeholder="John Doe" required
+        brbr
+        
+        label for="useremail" Email: /label
+        input type="email" id="useremail" name="email" required
+        brbr
+        
+        label for="userpassword" Password: /label
+        input type="password" id="userpassword" name="password" minlength="6"
+        brbr
+        
+        label for="dob" Date of Birth: /label
+        input type="date" id="dob" name="dob"
+        brbr
+        
+        label for="country" Country: /label
+        select id="country" name="country"
+            option India /option
+            option USA /option
+            option UK /option
+        /select
+        brbr
+        
+        input type="checkbox" id="agreement" required
+        label for="agreement" I agree to the terms and conditions /label
+        brbr
+        
+        button type="submit" Register /button
+        button type="reset" Clear /button
+    /fieldset
+/form
+    </pre>
+
+    <form action="/register" method="POST">
+        <fieldset>
+            <legend>Registration Form</legend>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+            <br><br>
+            
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" name="email" required>
+            <br><br>
+            
+            <label for="userpassword">Password:</label>
+            <input type="password" id="userpassword" name="password" minlength="6">
+            <br><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+            <br><br>
+            
+            <input type="checkbox" id="agreement" required>
+            <label for="agreement">I agree to the terms and conditions</label>
+            <br><br>
+            
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </fieldset>
+    </form>
+
